@@ -53,7 +53,7 @@ pipeline {
     stage('Run Docker Container') {
         agent any
         steps {
-            sh 'docker -H tcp://20.249.216.186:2375 container run -d --name myweb -p 8080:8080 $imageName:$BUILD_NUMBER'
+            sh 'docker -H tcp://20.249.216.186:2375 container run -d --name myjenkins-blueocean -p 8080:8080 $imageName:$BUILD_NUMBER'
         }
     }
   }
